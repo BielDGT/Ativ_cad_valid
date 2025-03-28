@@ -67,7 +67,7 @@
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt"></i>
                                             <input type="text" class="form-control" id="telefone" name="telefone" oninput="aplicarMascaraTelefone(event)" onblur="validatelefone()"
-                                            placeholder="(XX) XXXXX-XXXX">
+                                            placeholder="(XX)XXXXX-XXXX" maxlength="14">
                                         <span id="mensagem-erro-telefone"></span>
                                         </div>
                                     </div>
@@ -85,6 +85,38 @@
                                             <input type="text" class="form-control" id="estado" name="estado" onblur="validaestado()"
                                                 placeholder="ESTADO">
                                                 <span id="mensagem-estado"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <div class="form-group left-inner-addon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                            <input type="text" class="form-control" id="cpf" name="cpf" onblur="validacpf()"
+                                                placeholder="CPF">
+                                                <span id="mensagem-cpf"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <div class="form-group left-inner-addon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                            <input type="text" class="form-control" id="cep" name="cep" onblur="validacep()"
+                                                placeholder="CEP">
+                                                <span id="mensagem-cep"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <div class="form-group left-inner-addon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                            <input type="text" class="form-control" id="cnpj" name="cnpj" onblur="validacnpj()"
+                                                placeholder="CNPJ">
+                                                <span id="mensagem-cnpj"></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 col-4">
+                                        <div class="form-group left-inner-addon">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                            <input type="date" class="form-control" id="nasc" name="nasc" onblur="validanasc()"
+                                                placeholder="Nascimento">
+                                                <span id="mensagem-nasc"></span>
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Cadastrar</button>
