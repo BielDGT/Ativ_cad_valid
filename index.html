@@ -43,14 +43,14 @@
                                     <div class="mb-3 col-12">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-envelope-at"></i>
-                                            <input type="text" class="form-control" id="email" name="email" onblur="verificarEmail()" placeholder="EMAIL COMPLETO" />
+                                            <input type="text" class="form-control" id="email" name="email" onblur="verificarEmail()" placeholder="EMAIL COMPLETO" required>
                                             <span id="mensagem-erro-email"></span>
                                         </div>
                                     </div>
                                     <div class="mb-3 col-6">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-lock"></i>
-                                            <input type="password" class="form-control" id="senha" name="senha" onblur="validaSenha()"
+                                            <input type="password" class="form-control" id="senha" name="senha" onblur="validaSenha()" required
                                                 placeholder="SENHA">
                                                 <span id="erro-senha"></span>
                                         </div>
@@ -58,7 +58,7 @@
                                     <div class="mb-3 col-6">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-lock-fill"></i>
-                                            <input type="password" class="form-control" id="confirmar_senha" onblur="confirmarSenha()"
+                                            <input type="password" class="form-control" id="confirmar_senha" onblur="confirmarSenha()" required
                                                 name="confirmar_senha" placeholder="CONFIRMAR SENHA">
                                             <span id="mensagem-erro-confirmar-senha"></span>
                                         </div>
@@ -67,7 +67,7 @@
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt"></i>
                                             <input type="text" class="form-control" id="telefone" name="telefone" oninput="aplicarMascaraTelefone(event)" onblur="validatelefone()"
-                                            placeholder="(XX)XXXXX-XXXX" maxlength="14">
+                                            required placeholder="(XX)XXXXX-XXXX" maxlength="14">
                                         <span id="mensagem-erro-telefone"></span>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt"></i>
                                             <input type="text" class="form-control" id="cidade" name="cidade" onblur="validacidade()"
-                                                placeholder="CIDADE">
+                                            required   placeholder="CIDADE">
                                                 <span id="mensagem-cidade"></span>
                                         </div>
                                     </div>
@@ -83,43 +83,42 @@
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt-fill"></i>
                                             <input type="text" class="form-control" id="estado" name="estado" onblur="validaestado()"
-                                                placeholder="ESTADO">
+                                            required    placeholder="ESTADO">
                                                 <span id="mensagem-estado"></span>
                                         </div>
                                     </div>
                                     <div class="mb-3 col-4">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt-fill"></i>
-                                            <input type="text" class="form-control" id="cpf" name="cpf" onblur="validacpf()"
-                                                placeholder="CPF">
+                                            <input type="text" class="form-control" id="cpf" name="cpf" onblur="validacpf()" oninput="aplicarMascaraCPF(event)"
+                                            required placeholder="XXX.XXX.XXX-XX" maxlength="14">
                                                 <span id="mensagem-cpf"></span>
                                         </div>
                                     </div>
                                     <div class="mb-3 col-4">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt-fill"></i>
-                                            <input type="text" class="form-control" id="cep" name="cep" onblur="validacep()"
-                                                placeholder="CEP">
+                                            <input type="text" class="form-control" id="cep" name="cep" onblur="validacep()" required
+                                            oninput="aplicarMascaraCEP(event)" placeholder="XXXXX-XXX" maxlength="9">
                                                 <span id="mensagem-cep"></span>
                                         </div>
                                     </div>
                                     <div class="mb-3 col-4">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt-fill"></i>
-                                            <input type="text" class="form-control" id="cnpj" name="cnpj" onblur="validacnpj()"
-                                                placeholder="CNPJ">
+                                            <input type="text" class="form-control" id="cnpj" name="cnpj" onblur="validacnpj()" oninput="aplicarMascaraCNPJ(event)" required
+                                                placeholder="XX. XXX. XXX/0001-XX" maxlength="18">
                                                 <span id="mensagem-cnpj"></span>
                                         </div>
                                     </div>
                                     <div class="mb-3 col-4">
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt-fill"></i>
-                                            <input type="date" class="form-control" id="nasc" name="nasc" onblur="validanasc()"
-                                                placeholder="Nascimento">
+                                            <input type="date" class="form-control" id="nasc" name="nasc" onblur="validanasc()" required>
                                                 <span id="mensagem-nasc"></span>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    <button type="submit" class="btn btn-primary"  onclick="return validarFormulario()">Cadastrar</button>
                                 </form>
                             </div>
                         </div>
